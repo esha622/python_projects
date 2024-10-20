@@ -9,7 +9,7 @@ def Action(send) :
   
     data_btn  = send.lower()
 
-    if "what is your name" in   data_btn :
+    if "what is your name" in data_btn :
       speak.speak("my name is virtual Assistant")  
       return "my name is virtual Assistant"
 
