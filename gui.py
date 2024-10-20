@@ -12,7 +12,7 @@ def User_send():
         text.insert(END, "Bot <-- "+ str(bot)+"\n")
     if bot == "ok sir":
           root.destroy()  
-    entry1.delete(0, END)  # Clear the entry field
+    entry1.delete(0, END)
 
 
 def ask():
@@ -60,12 +60,12 @@ text.place(x= 100, y= 375, width= 375, height= 100)
 entry1 = Entry(root, justify=CENTER, bg="#d5cabd", fg="#333", font=("Arial", 14))
 entry1.place(x=100, y=500, width=350, height=50)
 
-button1 = Button(root, text="Ask", bg="#008b74", fg="white", pady=16, padx=40, borderwidth=1, relief=GROOVE, font=("Arial", 14), command=ask)
+button1 = Button(root, text="Ask", bg="#008b74", fg="white", pady=16, padx=40, borderwidth=1, relief=RIDGE, font=("Arial", 14), command=ask)
 button1.place(x=70, y=575)
 
-button2 = Button(root, text="Send", bg="#296073", fg="white", pady=16, padx=40, borderwidth=1, relief=GROOVE, font=("Arial", 14), command=User_send)
+button2 = Button(root, text="Send", bg="#296073", fg="white", pady=16, padx=40, borderwidth=1, relief=RIDGE, font=("Arial", 14), command=User_send)
 button2.place(x=400, y=575)
 
-button3 = Button(root, text="Delete", bg="#c34a36", fg="white", pady=16, padx=40, borderwidth=1, relief=GROOVE, font=("Arial", 14), command=delete_text)
+button3 = Button(root, text="Delete", bg="#c34a36", fg="white", pady=16, padx=40, borderwidth=1, relief=RIDGE, font=("Arial", 14), command=delete_text)
 button3.place(x=225, y=575)
 root.mainloop()
