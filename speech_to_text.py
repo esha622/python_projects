@@ -6,7 +6,7 @@ import speak
 def spech_to_text():
     r =  sr.Recognizer()
     with sr.Microphone() as source:
-      audio = r.listen(source) # methord 
+      audio = r.listen(source)
       voice_data = ''
       try:
         voice_data = r.recognize_google(audio)

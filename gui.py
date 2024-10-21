@@ -29,16 +29,14 @@ def delete_text():
     text.delete("1.0", "end")
 
 def on_entry_click(event):
-    # Clear the placeholder text when the entry is clicked
     if entry1.get() == "Message AI Assistant":
-        entry1.delete(0, "end")  # delete all the text in the entry
-        entry1.config(fg="#333")  # change the text color to the original
+        entry1.delete(0, "end")
+        entry1.config(fg="#333")
 
 def on_focusout(event):
-    # Restore the placeholder if the entry is empty
     if entry1.get() == "":
-        entry1.insert(0, "Message AI Assistant")  # insert placeholder text
-        entry1.config(fg="#a9a9a9")  # change the text color to gray
+        entry1.insert(0, "Message AI Assistant")
+        entry1.config(fg="#a9a9a9")
 
 root = Tk()
 root.geometry("550x675")
@@ -65,12 +63,11 @@ text = Text(root, font=('Courier 10 bold'), bg="#4e8397", fg="#fff6ff")
 text.grid(row=2, column=0)
 text.place(x=100, y=375, width=375, height=100) 
 
-# Entry Field with Placeholder
+
 entry1 = Entry(root, justify=CENTER, bg="#d5cabd", fg="#a9a9a9", font=("Arial", 14))
-entry1.insert(0, "Message AI Assistant")  # Set the placeholder
+entry1.insert(0, "Message AI Assistant")
 entry1.place(x=100, y=500, width=350, height=50)
 
-# Bind events for entry field
 entry1.bind("<FocusIn>", on_entry_click)
 entry1.bind("<FocusOut>", on_focusout)
 
